@@ -11,25 +11,25 @@
     <title><?php echo $judul; ?></title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar fixed-top navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Penjadwalan</a>
+        <a class="navbar-brand" href="#">Game 🎮</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo base_url()?>">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mahasiswa</a>
+                    <a class="nav-link" href="http://localhost/Web/index.php/anggota">Anggota</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dosen</a>
+                    <a class="nav-link" href="#">Jadwal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">akun</a>
                 </li>
             </ul>
         </div>
