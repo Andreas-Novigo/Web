@@ -12,7 +12,7 @@ class Anggota extends CI_Controller
         $this->form_validation->set_rules('steam','steam','required');
         if($this->form_validation->run()==false){
         $this->load->view('templates/header',$data);
-        $this->load->view('anggota/index', $data);
+        $this->load->view('Anggota/index', $data);
         $this->load->view('templates/footer');
         }else {
             $data = [
@@ -21,8 +21,26 @@ class Anggota extends CI_Controller
                 'steam' => $this->input->post('steam'),
             ];
             $this->db->insert('mahasiswa',$data);
-            redirect('mahasiswa');
+            redirect('Anggota');
         }
+    }
+
+    public function ubah() {
+        $id = $this->input->post('id', true);
+        $data = [
+            'nama' => $this->input->post('nama', true),
+            'steam' => $this->input->post('steam', true),
+        ];
+    
+        $this->load->model('M_anggota');
+        $this->M_anggota->UbahData($id, $data);
+        redirect('Anggota');
+    }
+    
+    public function hapus($id)
+    {
+        $this->M_anggota->HapusData($id);
+        redirect('Anggota');
     }
 }
 ?>

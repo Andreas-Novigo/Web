@@ -1,3 +1,4 @@
+<div class="bg-dark text-white">
 <div class="container">
     <div class="row mt-5">
         <div class="col mt-4">
@@ -11,12 +12,12 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Mohon isi Datanya 🎮</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Add Data 🎮</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-<form action="<?php echo base_url('mahasiswa')?>" method="post">
+<form action="<?php echo base_url('Anggota')?>" method="post">
       <div class="modal-body">
         <div class="form-group">
           <div class="form-group">
@@ -24,7 +25,7 @@
             <input type="numeric" name="id" class="form-control" id="id" placeholder=" masukkan ID anda">
         </div>
             <label for="nama">Nama</label>
-            <input type="text" name="nama" class="form-control" id="mama" placeholder=" masukkan Nama anda">
+            <input type="text" name="nama" class="form-control" id="nama" placeholder=" masukkan Nama anda">
         </div>
         <div class="form-group">
             <label for="steam">Steam</label>
@@ -33,7 +34,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" name="save" class="btn btn-primary">Save</button>
       </div>
 </form>
     </div>
@@ -56,8 +57,10 @@
       <td><?php echo $ag['nama']; ?></td>
       <td><?php echo $ag['steam']; ?></td>
       <td>
-        <a href="<?= base_url(); ?>anggota/ubah/<?= $ag['id']; ?>" class=" btn btn-success">Edit</a>
-        <a href="<?= base_url(); ?>anggota/hapus/<?= $ag['id']; ?>" class=" btn btn-danger" onclick="return confirm('Are You Sure?');">Delete</a>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editmodal<?= $ag['id'];?>">
+        Edit
+      </button>
+        <a href="<?= base_url(); ?>anggota/hapus/<?= $ag['id']; ?>" class=" btn btn-danger text-dark" onclick="return confirm('Are You Sure?');">Delete</a>
       </td>
     </tr>
     <?php endforeach; ?>
@@ -66,3 +69,43 @@
         </div>
     </div>
 </div>
+</div>
+
+
+<!-- edit -->
+<?php $no= 0; foreach($anggota as $ag) : $no++; ?>
+<div class="modal fade" id="editmodal<?= $ag['id'];?>" tabindex="-1" role="dialog" aria-labelledby="editmodellabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editmodallabel">Edit Data 🎮</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <?= form_open_multipart('Anggota/ubah'); ?>
+      <input type="hidden" name="id" value="<?= $ag['id']; ?>">
+      
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="id">ID</label>
+            <input type="numeric" name="id" class="form-control" value="<?= $ag['id'];?>" id="id" placeholder=" masukkan ID anda">
+        </div>
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" class="form-control" value="<?= $ag['nama'];?>" id="nama" placeholder=" masukkan Nama anda">
+        </div>
+        <div class="form-group">
+            <label for="steam">Steam</label>
+            <input type="text" name="steam" class="form-control" value="<?= $ag['steam'];?>" id="steam" placeholder=" masukkan Steam anda">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
+      </div>
+    <?= form_close(); ?>
+    </div>
+  </div>
+</div>
+<?php endforeach; ?>

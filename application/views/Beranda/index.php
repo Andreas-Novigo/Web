@@ -1,4 +1,10 @@
 <div class="container">
+  <div class="row mt-5">
+  <div class="col mt-4 text-center text-warning">
+    <h1>My Activity</h1>
+    <hr>
+  </div>
+  </div>
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -21,7 +27,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/images/img3.png" class="d-block w-100" height="590" alt="...">
+      <a href="Anggota"><img src="assets/images/img3.png" class="d-block w-100" height="590" alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide</h5>
         <p>Balapan sama polisi 🗿</p>
@@ -43,17 +49,17 @@
 <section class="about" id="about">
 <div class="container">
     <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center text-primary">
                 <h2>ABOUT</h2>
                 <hr>
             </div>
     </div>
     <div class="row justify-content-center">
     <div class="col-md-5">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ullam repellat iure. Nisi dignissimos at obcaecati, deleniti tempora eos, rem sint enim doloribus nam voluptas sapiente vero, fugiat cupiditate exercitationem!</p>
+        <p>Halo semuanya perkenalkan nama saya Andreas Novigo disini saya ingin menunjukkan hasil tugas saya yaitu hasil program/codingan saya selama ini, oh iya jika ada kesalahan mohon bantunnya ya teman-teman biar saya tau dimana kesalahannya 😁</p>
     </div>
     <div class="col-md-5">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ullam repellat iure. Nisi dignissimos at obcaecati, deleniti tempora eos, rem sint enim doloribus nam voluptas sapiente vero, fugiat cupiditate exercitationem!</p>
+        <p>Halo semuanya perkenalkan nama saya Andreas Novigo disini saya ingin menunjukkan hasil tugas saya yaitu hasil program/codingan saya selama ini, oh iya jika ada kesalahan mohon bantunnya ya teman-teman biar saya tau dimana kesalahannya 😁</p>
     </div>
     </div>
 </div>
@@ -62,7 +68,7 @@
 <selection class="kontak" id="kontak">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center text-primary">
                 <h2>KONTAK</h2>
                 <hr>
             </div>
