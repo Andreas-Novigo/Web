@@ -2,7 +2,7 @@
   <div class="row mt-5">
   <div class="col mt-4 text-center text-warning">
     <h1>My Activity</h1>
-    <hr>
+    <hr class="bg-white">
   </div>
   </div>
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -13,21 +13,21 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/images/img1.png" class="d-block w-100" height="590" alt="...">
+      <a href="https://store.steampowered.com/app/380600/Fishing_Planet/"><img src="assets/images/img1.png" class="d-block w-100" width="100%" alt="Fishing Planet"></a>
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide</h5>
         <p>Sedang mancing cuy di game 😂</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="assets/images/img2.png" class="d-block w-100" height="590" alt="...">
+      <a href="https://store.steampowered.com/app/242760/The_Forest/"><img src="assets/images/img2.png" class="d-block w-100" width="100%" alt="The Forest"></a>
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide</h5>
         <p>nah kalo ini lagi menggundulin hutan 😅</p>
       </div>
     </div>
     <div class="carousel-item">
-      <a href="Anggota"><img src="assets/images/img3.png" class="d-block w-100" height="590" alt="..."></a>
+      <a href="https://store.steampowered.com/app/1222680/Need_for_Speed_Heat/"><img src="assets/images/img3.png" class="d-block w-100" width="100%" alt="NFS HEAT"></a>
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide</h5>
         <p>Balapan sama polisi 🗿</p>
@@ -43,18 +43,17 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
 
 <!-about->
 <section class="about" id="about">
 <div class="container">
     <div class="row">
-            <div class="col-md-12 text-center text-primary">
+            <div class="col-md-12 text-center text-success">
+                <hr class="bg-white">
                 <h2>ABOUT</h2>
-                <hr>
             </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center text-white">
     <div class="col-md-5">
         <p>Halo semuanya perkenalkan nama saya Andreas Novigo disini saya ingin menunjukkan hasil tugas saya yaitu hasil program/codingan saya selama ini, oh iya jika ada kesalahan mohon bantunnya ya teman-teman biar saya tau dimana kesalahannya 😁</p>
     </div>
@@ -68,12 +67,12 @@
 <selection class="kontak" id="kontak">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-md-12 text-center text-primary">
+            <div class="col-md-12 text-center text-success">
+                <hr class="bg-white">
                 <h2>KONTAK</h2>
-                <hr>
             </div>
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center text-white">
                     <div class="col-md-5">
             <form>
   <div class="form-group">
