@@ -15,20 +15,20 @@ class Anggota extends CI_Controller
         $this->form_validation->set_rules('nama','nama','required');
         $this->form_validation->set_rules('steam','steam','required|is_unique[mahasiswa.steam]');
         if($this->form_validation->run()==false){
-        $this->load->view('templates/header',$data);
-        $this->load->view('Anggota/index', $data);
-        $this->load->view('templates/footer');
-        }else {
-            $data = [
-                'kode' => $this->input->post('kode'),
-                'nama' => $this->input->post('nama'),
-                'steam' => $this->input->post('steam'),
-                'pangkat' => $this->input->post('pangkat'),
-            ];
-            $this->db->insert('mahasiswa',$data);
-            $this->session->set_flashdata('flash', ' ditambah');
-            redirect('Anggota');
-        }
+            $this->load->view('templates/header',$data);
+            $this->load->view('Anggota/index', $data);
+            $this->load->view('templates/footer');
+            }else {
+                $data = [
+                    'kode' => $this->input->post('kode'),
+                    'nama' => $this->input->post('nama'),
+                    'steam' => $this->input->post('steam'),
+                    'pangkat' => $this->input->post('pangkat'),
+                ];
+                $this->db->insert('mahasiswa',$data);
+                $this->session->set_flashdata('flash', ' ditambah');
+                redirect('Anggota');
+            }
     }
 
     public function ubah() {

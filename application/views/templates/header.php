@@ -31,7 +31,10 @@
                     <a class="nav-link" href="<?php echo base_url('Anggota')?>">Anggota</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Jadwal</a>
+                    <a class="nav-link" href="<?php echo base_url('Games')?>">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/Login')?>">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('tes')?>">jangan di tekan</a>

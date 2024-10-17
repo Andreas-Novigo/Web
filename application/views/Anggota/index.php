@@ -3,6 +3,7 @@
     <div class="row mt-5">
         <div class="col mt-4">
 
+        <!--validasi error -->
         <div class="row mt-3"></div>
         <?php if(validation_errors()) : ?>
             <div class="alert alert-danger" role="alert">
@@ -12,6 +13,7 @@
               <?= validation_errors(); ?>
             </div>
         <?php endif; ?>
+
             <!-- Button trigger modal -->
               <div class="form-inline my-2 my-lg-3">
               <button type="button" class="btn btn-outline-primary mr-sm-4" data-toggle="modal" data-target="#exampleModalScrollable">CRATE</button>
@@ -50,6 +52,12 @@
       </div>
 <form action="<?php echo base_url('Anggota')?>" method="post">
       <div class="modal-body">
+        <?php if(validation_errors()) : ?>
+            <div class="alert alert-danger" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <?= validation_errors(); ?>
+            </div>
+        <?php endif; ?>
         <div class="form-group">
           <div class="form-group">
             <label for="kode">Kode</label>
