@@ -34,7 +34,7 @@
                     <a class="nav-link" href="<?php echo base_url('Games')?>">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/Login')?>">Login</a>
+                    <a class="nav-link" href="<?php echo base_url('admin/login/logout')?>">Log Out</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('tes')?>">jangan di tekan</a>

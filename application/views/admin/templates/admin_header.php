@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $judul?></title>
 
+  <link rel="shortcut icon" href="assets/images/im.png">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="<?= base_url('assets/') ?>https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -17,5 +18,5 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?= base_url('assets/') ?>index2.html"><b>Admin</b>LTE</a>
+    <a href="<?= base_url('assets/') ?>index2.html"><b>AKIMA</b> AMARI</a>
   </div>

@@ -9,7 +9,7 @@
         </div>
         <div class="card-body">
             <h5 class="card-title"><?= $games['nama']; ?></h5>
-            <p class="card-text"><?= $games['harga']; ?></p>
+            <p class="card-text">Rp <?= $games['harga']; ?></p>
             <p class="card-text"><?= $games['size']; ?></p>
             <a href="<?= base_url('Games'); ?>" class="btn btn-success">Back</a>
         </div>

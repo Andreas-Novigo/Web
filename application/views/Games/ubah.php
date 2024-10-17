@@ -11,11 +11,14 @@
             <div class="form-group">
                 <label for="nama">Nama Game</label>
                 <input type="text" class="form-control" value="<?= $games['nama']; ?>" id="nama" name="nama">
-                <small class="form-text text-danger"><?= form_error('name') ?></small>
             </div>
             <div class="form-group">
                 <label for="harga">Harga</label>
                 <input type="text" class="form-control" value="<?= $games['harga']; ?>" id="harga" name="harga">
+            </div>
+            <div class="form-group">
+                <label for="size">Size/ukuran</label>
+                <input type="text" class="form-control" value="<?= $games['size']; ?>" id="size" name="size">
             </div>
             <button type="submit" name="ubah" class="btn btn-success">Ubah</button>
             </form>

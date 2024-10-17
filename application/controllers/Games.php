@@ -5,6 +5,9 @@ class Games extends CI_Controller
 {
     public function index()
     {
+        if(empty($this->session->userdata('email'))){
+            redirect('admin/login');
+        }
         $data['judul'] = 'Halaman Anggota';
         $data['games'] = $this->M_gamer->AllData();
         if($this->input->post('keyword')){
@@ -20,6 +23,7 @@ class Games extends CI_Controller
         $data['judul'] = 'tambah Data Game';
         $this->form_validation->set_rules('nama','nama','required|is_unique[games.nama]');
         $this->form_validation->set_rules('harga','harga','required');
+        $this->form_validation->set_rules('size','size','required');
         if($this->form_validation->run()==false){
             $this->load->view('templates/header',$data);
             $this->load->view('Games/tambah', $data);
@@ -36,8 +40,9 @@ class Games extends CI_Controller
         $data['judul'] = 'Ubah Data Game';
         $data['games'] = $this->M_gamer->GetGamesbyNo($no);
 
-        $this->form_validation->set_rules('nama','nama','required|is_unique[games.nama]');
+        $this->form_validation->set_rules('nama','nama','required');
         $this->form_validation->set_rules('harga','harga','required');
+        $this->form_validation->set_rules('size','size','required');
         if($this->form_validation->run()==false){
             $this->load->view('templates/header',$data);
             $this->load->view('Games/ubah', $data);

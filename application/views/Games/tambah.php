@@ -16,7 +16,11 @@
                 <label for="harga">Harga</label>
                 <input type="text" class="form-control" id="harga" name="harga">
             </div>
-            <button type="submit" name="tambah" class="btn btn-success">Tambah</button>
+            <div class="form-group">
+                <label for="size">Size/Ukuran</label>
+                <input type="text" class="form-control" id="size" name="size">
+            </div>
+            <button type="submit" name="tambah" class="btn btn-success">ADD</button>
             </form>
         </div>
         </div>

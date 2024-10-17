@@ -5,6 +5,9 @@ class Anggota extends CI_Controller
 {
     public function index()
     {
+        if(empty($this->session->userdata('email'))){
+            redirect('admin/login');
+        }
         $data['judul'] = 'Halaman Anggota';
         $data['anggota'] = $this->M_anggota->AllData();
         if($this->input->post('keyword')){

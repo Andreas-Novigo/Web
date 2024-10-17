@@ -17,20 +17,14 @@ class Registrasi extends CI_Controller
             $this->load->view('admin/registrasi', $data);
             $this->load->view('admin/templates/admin_footer');
         } else {
-            // Jika validasi berhasil, simpan data ke database
             $data = [
                 'nama' => $this->input->post('nama', true),
                 'email' => $this->input->post('email', true),
                 'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             ];
 
-            // Masukkan ke database
             $this->db->insert('akun', $data);
-
-            // Set pesan sukses
             $this->session->set_flashdata('flash', '<div class="alert alert-success" role="alert">Selamat, Anda berhasil registrasi!</div>');
-            
-            // Redirect ke halaman login
             redirect('admin/login');
         }
     }

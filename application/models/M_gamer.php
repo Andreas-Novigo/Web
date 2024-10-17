@@ -13,6 +13,7 @@ class M_gamer extends CI_Model
         $data =[
             "nama" =>$this->input->post('nama', true),
             "harga" =>$this->input->post('harga', true),
+            "size" =>$this->input->post('size', true),
         ];
         $this->db->insert('games', $data);
     }
@@ -35,11 +36,12 @@ class M_gamer extends CI_Model
         return $this->db->get('games')->result_array();
     }
 
-    public function UbahData($no)
+    public function UbahData()
     {
         $data =[
             "nama" =>$this->input->post('nama', true),
             "harga" =>$this->input->post('harga', true),
+            "size" =>$this->input->post('size', true),
         ];
         $this->db->where('no', $this->input->post('no'));
         return $this->db->update('games', $data);
